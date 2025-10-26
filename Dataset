@@ -14,7 +14,5 @@ list_of_tensors = [path_to_tensor(img_path) for img_path in tqdm(img_paths)]
 return np.vstack(list_of_tensors) 
 train_generator = train_datagen.flow_from_directory(train_data_dir,batch_size=32,shuffle=True,target_size=(224, 224)) 
 train_tensors = paths_to_tensor(xtrain).astype('float32')/255 - 0.5 
-valid_tensors = paths_to_tensor(xtest).astype('float32')/255 - 0.5 A Vision-based Driver Attention Monitoring System 
-Department of CS&E, BIT 2021-22 Page 30 
-
+valid_tensors = paths_to_tensor(xtest).astype('float32')/255 - 0.5
 xtrain,xtest,ytrain,ytest = train_test_split(data_train.iloc[:,0],labels,test_size = 0.2,random_state=42) 
